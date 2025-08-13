@@ -5,8 +5,11 @@ import pprint
 import numpy as np
 import cv2
 
-DATA_DIR = r'G:\\Microsee\\camera_calibration\\CameraCalibration-master\\src\\images\\calibrated'  ## "../data/"
-save_dir=r"G:/Microsee/camera_calibration/images/save1/"
+
+# DATA_DIR = r'G:\\Microsee\\camera_calibration\\CameraCalibration-master\\src\\images\\calibrated'  ## "../data/"
+DATA_DIR = r'./src/images/calibrated'
+save_dir = r"./save/save1/"
+# save_dir=r"G:/Microsee/camera_calibration/images/save1/"
 images = [each for each in glob.glob(DATA_DIR + "*.png")]
 images = sorted(images)
 for each in images:

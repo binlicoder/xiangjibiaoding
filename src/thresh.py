@@ -1,4 +1,5 @@
-out_dir=r"G:/Microsee/camera_calibration/images/"
+# out_dir=r"G:/Microsee/camera_calibration/images/"
+out_dir = r"./src/images/"
 from PIL import Image     #??
 from pylab import *       #Matplotlib 中的 PyLab 接口包含很多方便用户创建图像的函数
 import numpy as np
@@ -9,6 +10,7 @@ from PIL import Image
 from pylab import *
 from scipy.cluster.vq import *
 import cv2 as cv
+
 def get_imlist(path):
      """ 返回目录中所有 JPG 图像的文件名列表 """
      return [os.path.join(path,f) for f in os.listdir(path) if f.endswith('.png')]

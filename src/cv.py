@@ -21,7 +21,8 @@ objp[0, :, :2] = np.mgrid[0:CHECKERBOARD[0], 0:CHECKERBOARD[1]].T.reshape(-1, 2)
 prev_img_shape = None
 
 # Extracting path of individual image stored in a given directory
-images = glob.glob(r'G:/Microsee/camera_calibration/CameraCalibration-master/src/images/calibrated/1/*.png')
+# images = glob.glob(r'G:/Microsee/camera_calibration/CameraCalibration-master/src/images/calibrated/1/*.png')
+images = glob.glob(r'./src/images/calibrated/1/*.png')
 for fname in images:
     img = cv2.imread(fname)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -74,8 +75,8 @@ print(rvecs)
 print("tvecs : \n")
 print(tvecs)
 # images to be calibrated
-datadir=r"G:/Microsee/camera_calibration/CameraCalibration-master/src/images/raw_ring/"
-
+# datadir=r"G:/Microsee/camera_calibration/CameraCalibration-master/src/images/raw_ring/"
+datadir = r"./src/images/raw_ring/"
 path=os.path.join(datadir)
 img_list=os.listdir(path)
 
